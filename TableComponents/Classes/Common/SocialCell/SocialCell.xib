@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SocialCell" rowHeight="-76" id="1b5-sR-27b" customClass="SocialCell" customModule="tonesky" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1b5-sR-27b" id="Dci-z3-ovU">
+                <frame key="frameInset" width="375" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4b-G8-pMf">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Fwt-ut-5V5"/>
+                            <constraint firstAttribute="width" constant="50" id="Jp3-Vd-htj"/>
+                        </constraints>
+                        <state key="normal" image="vkButton"/>
+                        <connections>
+                            <action selector="vkButtonPressed:" destination="1b5-sR-27b" eventType="touchUpInside" id="5Nw-dC-SNv"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvc-gH-hDy">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="1ZL-8p-OAO"/>
+                            <constraint firstAttribute="width" constant="50" id="aHg-2P-eha"/>
+                        </constraints>
+                        <state key="normal" image="fbButton"/>
+                        <connections>
+                            <action selector="fbButtonPressed:" destination="1b5-sR-27b" eventType="touchUpInside" id="pSm-cG-wuZ"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="L4b-G8-pMf" firstAttribute="centerY" secondItem="Dci-z3-ovU" secondAttribute="centerY" id="1Tg-OA-4OO"/>
+                    <constraint firstItem="L4b-G8-pMf" firstAttribute="leading" secondItem="Dci-z3-ovU" secondAttribute="leadingMargin" constant="67" id="7sA-Sc-RBf"/>
+                    <constraint firstAttribute="trailing" secondItem="gvc-gH-hDy" secondAttribute="trailing" constant="67" id="TWG-s8-qPR"/>
+                    <constraint firstItem="gvc-gH-hDy" firstAttribute="centerY" secondItem="Dci-z3-ovU" secondAttribute="centerY" id="msa-td-5MM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="fbButton" destination="gvc-gH-hDy" id="adY-qw-56T"/>
+                <outlet property="vkButton" destination="L4b-G8-pMf" id="YOX-A9-5tX"/>
+            </connections>
+            <point key="canvasLocation" x="38.5" y="-25"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="fbButton" width="20" height="39"/>
+        <image name="vkButton" width="50" height="29"/>
+    </resources>
+</document>
