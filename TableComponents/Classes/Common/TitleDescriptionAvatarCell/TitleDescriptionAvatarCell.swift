@@ -9,7 +9,7 @@
 
 import UIKit
 import TableKit
-import SDWebImage
+//import SDWebImage
 
 class TitleDescriptionAvatarCell: UITableViewCell {
   
@@ -55,7 +55,7 @@ extension TitleDescriptionAvatarCell: ConfigurableCell {
     titleLabel.text = item.title
     descripionLabel.text = item.description
     if let url = URL(string: item.avatar) {
-      avatarImageView.sd_setImage(with: url)
+//      avatarImageView.sd_setImage(with: url)
     }
     if let customizeTitleLabel = item.customizeTitleLabel {
       customizeTitleLabel(titleLabel)
