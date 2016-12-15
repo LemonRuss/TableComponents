@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TableComponents_Example' do
+  pod 'TableComponents', :path => '../'
+
+  target 'TableComponents_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
