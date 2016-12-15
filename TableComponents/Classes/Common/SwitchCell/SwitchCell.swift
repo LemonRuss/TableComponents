@@ -9,13 +9,13 @@
 import UIKit
 import TableKit
 
-class SwitchCell: UITableViewCell {
+open class SwitchCell: UITableViewCell {
 
   @IBOutlet weak var titleLabel: UILabel!
   
   @IBOutlet weak var switcher: UISwitch!
 
-  struct Actions {
+  public struct Actions {
     static let switchChanged = "SwitchChanged"
   }
   
@@ -25,7 +25,7 @@ class SwitchCell: UITableViewCell {
 }
 
 extension SwitchCell: ConfigurableCell {
-  func configure(with info: String) {
+  public func configure(with info: String) {
     titleLabel.text = info
   }
 }

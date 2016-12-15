@@ -10,9 +10,9 @@ import TableKit
 import GridKit
 
 
-class TwoColumnsCell: UITableViewCell {
+open class TwoColumnsCell: UITableViewCell {
   
-  typealias ItemType = (left: [Container], right: [Container], withSeparator: Bool)
+  public typealias ItemType = (left: [Container], right: [Container], withSeparator: Bool)
   
   @IBOutlet weak var leftStackView: UIStackView! {
     didSet {
@@ -35,7 +35,7 @@ class TwoColumnsCell: UITableViewCell {
 
 extension TwoColumnsCell: ConfigurableCell {
   
-  func configure(with columnsInfo: ItemType) {
+  public func configure(with columnsInfo: ItemType) {
     update(dataManager: leftDataManager, containers: columnsInfo.left)
     update(dataManager: rightDataManager, containers: columnsInfo.right)
     

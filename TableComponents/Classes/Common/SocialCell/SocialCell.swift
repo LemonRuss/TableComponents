@@ -9,13 +9,13 @@
 import UIKit
 import TableKit
 
-class SocialCell: UITableViewCell {
+open class SocialCell: UITableViewCell {
 
   @IBOutlet weak var vkButton: UIButton!
   @IBOutlet weak var fbButton: UIButton!
   
   
-  struct Actions {
+  public struct Actions {
     static let vkButtonPressed = "vkButtonPressed"
     static let fbButtonPressed = "fbButtonPressed"
   }
@@ -30,7 +30,7 @@ class SocialCell: UITableViewCell {
 }
 
 extension SocialCell: ConfigurableCell {
-  func configure(with item: String) {
+  public func configure(with item: String) {
     
   }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextFieldPlaceholder: UITextField {
+open class TextFieldPlaceholder: UITextField {
   
   var placeholderColor: UIColor? {
     didSet {

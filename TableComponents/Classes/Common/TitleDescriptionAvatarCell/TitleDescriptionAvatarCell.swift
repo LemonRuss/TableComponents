@@ -11,7 +11,7 @@ import UIKit
 import TableKit
 //import SDWebImage
 
-class TitleDescriptionAvatarCell: UITableViewCell {
+open class TitleDescriptionAvatarCell: UITableViewCell {
   
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var descripionLabel: UILabel!
@@ -23,7 +23,7 @@ class TitleDescriptionAvatarCell: UITableViewCell {
     }
   }
   
-  static func defaultStyle(title: String, description: String, avatar: String) -> Info {
+  public static func defaultStyle(title: String, description: String, avatar: String) -> Info {
     return Info(title: title, description: description, avatar: avatar, customizeTitleLabel: {
       $0.textColor = UIColor(hex: 0x4A4A4A)
     }, customizeDescriptionLabel: {
@@ -33,7 +33,7 @@ class TitleDescriptionAvatarCell: UITableViewCell {
   }
   
   
-  struct Info {
+  public struct Info {
     var title: String
     var description: String
     var avatar: String
@@ -41,7 +41,7 @@ class TitleDescriptionAvatarCell: UITableViewCell {
     var customizeDescriptionLabel: ((UILabel) -> Void)?
   }
   
-  struct Actions {
+  public struct Actions {
     static let descriptionLabelTapped = "DescriptionLabelTapped"
   }
   
@@ -51,7 +51,7 @@ class TitleDescriptionAvatarCell: UITableViewCell {
 }
 
 extension TitleDescriptionAvatarCell: ConfigurableCell {
-  func configure(with item: Info) {
+  public func configure(with item: Info) {
     titleLabel.text = item.title
     descripionLabel.text = item.description
     if let url = URL(string: item.avatar) {

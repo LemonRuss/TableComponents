@@ -10,16 +10,16 @@ import UIKit
 import SnapKit
 
 
-class LoadableFromXibView: UIView {
+open class LoadableFromXibView: UIView {
   
   @IBOutlet weak var view: UIView!
   
-  override init(frame: CGRect) {
+  public override init(frame: CGRect) {
     super.init(frame: frame)
     xibSetup()
   }
   
-  required init?(coder aDecoder: NSCoder) {
+  public required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     xibSetup()
   }

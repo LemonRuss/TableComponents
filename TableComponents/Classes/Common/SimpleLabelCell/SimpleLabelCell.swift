@@ -9,7 +9,7 @@
 import UIKit
 import TableKit
 
-class SimpleLabelCell: UITableViewCell {
+open class SimpleLabelCell: UITableViewCell {
   @IBOutlet weak var titleLabel: UILabel! {
     didSet {
       titleLabel.isUserInteractionEnabled = true
@@ -18,13 +18,13 @@ class SimpleLabelCell: UITableViewCell {
     }
   }
   
-  static var defaultHeight: CGFloat? = 50
+  public static var defaultHeight: CGFloat? = 50
   
-  struct Info {
+  public struct Info {
     var text: String
   }
   
-  struct Actions {
+  public struct Actions {
     static let labelPressed = "LabelPressed"
   }
   
@@ -34,7 +34,7 @@ class SimpleLabelCell: UITableViewCell {
 }
 
 extension SimpleLabelCell: ConfigurableCell {
-  func configure(with item: String) {
+  public func configure(with item: String) {
     separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right:0)
     titleLabel.text = item
   }

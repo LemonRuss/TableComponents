@@ -9,32 +9,32 @@
 import UIKit
 import TableKit
 
-class HeightControlledCell: UITableViewCell {
+open class HeightControlledCell: UITableViewCell {
   
   @IBOutlet weak var titleLabel: UILabel!
   
-  static var defaultHeight: CGFloat?  = 5
+  public static var defaultHeight: CGFloat?  = 5
   
-  struct Info {
+  public struct Info {
     var height: CGFloat
     var text: String?
     var customizeLabel: ((UILabel) -> Void)?
   }
   
-  static func defautStyle(title: String) -> HeightControlledCell.Info {
+  public static func defautStyle(title: String) -> HeightControlledCell.Info {
     return Info(height: 19.5, text: title, customizeLabel: {
       $0.textAlignment = .left
       $0.isUserInteractionEnabled = false
     })
   }
   
-  static func centerStyle(title: String) -> HeightControlledCell.Info {
+  public static func centerStyle(title: String) -> HeightControlledCell.Info {
     return Info(height: 30, text: title, customizeLabel: {
       $0.textAlignment = .center
     })
   }
   
-  static func tappable(title: String) -> HeightControlledCell.Info {
+  public static func tappable(title: String) -> HeightControlledCell.Info {
     return Info(height: 30, text: title, customizeLabel: {
       $0.textAlignment = .center
       $0.isUserInteractionEnabled = true
@@ -45,13 +45,13 @@ class HeightControlledCell: UITableViewCell {
     TableCellAction(key: Actions.ShowMore, sender: self).invoke()
   }
   
-  struct Actions {
+  public struct Actions {
     static let ShowMore = "ShowMore"
   }
 }
 
 extension HeightControlledCell: ConfigurableCell {
-  func configure(with item: Info) {
+  public func configure(with item: Info) {
     HeightControlledCell.defaultHeight = item.height
     if let text = item.text {
       titleLabel.text = text

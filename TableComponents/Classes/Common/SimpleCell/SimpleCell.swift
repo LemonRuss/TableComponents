@@ -9,32 +9,32 @@
 import UIKit
 import TableKit
 
-class SimpleCell: UITableViewCell {
+open class SimpleCell: UITableViewCell {
   @IBOutlet weak var textView: TextFieldPlaceholder!
   
-  static var defaultHeight: CGFloat? = 50
+  public static var defaultHeight: CGFloat? = 50
   
-  static func defaultStyle(text: String) -> Info {
+  public static func defaultStyle(text: String) -> Info {
     return Info(text: text, hide: false)
   }
   
-  static func secureStyle(text: String) -> Info {
+  public static func secureStyle(text: String) -> Info {
     return Info(text: text, hide: true)
   }
   
-  struct Info {
+  public struct Info {
     var text: String
     var hide = false
   }
   
-  struct Actions {
+  public struct Actions {
     static let valueDidChanged = "ValueDidChanged"
     static let didEndEditing = "DidEndEditing"
   }
 }
 
 extension SimpleCell: ConfigurableCell {
-  func configure(with item: Info) {
+  public func configure(with item: Info) {
     separatorInset = UIEdgeInsets(top: 0, left: 39, bottom: 0, right:0)
     textView.placeholderColor = UIColor(hex: 0x4A4A4A)
     textView.placeholderTitle = item.text
@@ -47,11 +47,11 @@ extension SimpleCell: ConfigurableCell {
 
 extension SimpleCell: UITextFieldDelegate {
   
-  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+  public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     TableCellAction(key: Actions.didEndEditing, sender: self).invoke()
     return true
   }
-  func textFieldDidEndEditing(_ textField: UITextField) {
+  public func textFieldDidEndEditing(_ textField: UITextField) {
     TableCellAction(key: Actions.didEndEditing, sender: self).invoke()
   }
 }
