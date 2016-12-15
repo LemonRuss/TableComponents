@@ -10,7 +10,7 @@ import UIKit
 import TableKit
 
 open class SimpleCell: UITableViewCell {
-  @IBOutlet weak var textView: TextFieldPlaceholder!
+  @IBOutlet public weak var textView: TextFieldPlaceholder!
   
   public static var defaultHeight: CGFloat? = 50
   

@@ -10,7 +10,7 @@ import UIKit
 import TableKit
 
 open class SimpleLabelCell: UITableViewCell {
-  @IBOutlet weak var titleLabel: UILabel! {
+  @IBOutlet public weak var titleLabel: UILabel! {
     didSet {
       titleLabel.isUserInteractionEnabled = true
       let tap = UITapGestureRecognizer(target: self, action: #selector(labelPressed))

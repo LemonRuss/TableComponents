@@ -14,12 +14,12 @@ open class TwoColumnsCell: UITableViewCell {
   
   public typealias ItemType = (left: [Container], right: [Container], withSeparator: Bool)
   
-  @IBOutlet weak var leftStackView: UIStackView! {
+  @IBOutlet public weak var leftStackView: UIStackView! {
     didSet {
       leftDataManager = StackViewDataManager(stackView: leftStackView)
     }
   }
-  @IBOutlet weak var rightStackView: UIStackView! {
+  @IBOutlet public weak var rightStackView: UIStackView! {
     didSet {
       rightDataManager = StackViewDataManager(stackView: rightStackView)
     }

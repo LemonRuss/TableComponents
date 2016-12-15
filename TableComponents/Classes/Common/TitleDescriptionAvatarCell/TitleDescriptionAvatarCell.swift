@@ -13,8 +13,8 @@ import TableKit
 
 open class TitleDescriptionAvatarCell: UITableViewCell {
   
-  @IBOutlet weak var titleLabel: UILabel!
-  @IBOutlet weak var descripionLabel: UILabel!
+  @IBOutlet public weak var titleLabel: UILabel!
+  @IBOutlet public weak var descripionLabel: UILabel!
   
   @IBOutlet weak var avatarImageView: UIImageView! {
     didSet {

@@ -17,8 +17,8 @@ open class LabelWithImage: LoadableFromXibView {
     var image: UIImage?
   }
   
-  @IBOutlet weak var titleLabel: UILabel!
-  @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet public weak var titleLabel: UILabel!
+  @IBOutlet public weak var imageView: UIImageView!
   
   public static var defaultHeight: CGFloat?  = 30
   

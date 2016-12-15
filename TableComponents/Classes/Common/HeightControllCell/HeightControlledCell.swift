@@ -11,7 +11,7 @@ import TableKit
 
 open class HeightControlledCell: UITableViewCell {
   
-  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet public weak var titleLabel: UILabel!
   
   public static var defaultHeight: CGFloat?  = 5
   

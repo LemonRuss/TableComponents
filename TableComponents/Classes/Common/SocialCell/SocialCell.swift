@@ -11,8 +11,8 @@ import TableKit
 
 open class SocialCell: UITableViewCell {
 
-  @IBOutlet weak var vkButton: UIButton!
-  @IBOutlet weak var fbButton: UIButton!
+  @IBOutlet public weak var vkButton: UIButton!
+  @IBOutlet public weak var fbButton: UIButton!
   
   
   public struct Actions {

@@ -11,9 +11,9 @@ import TableKit
 
 open class SwitchCell: UITableViewCell {
 
-  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet public weak var titleLabel: UILabel!
   
-  @IBOutlet weak var switcher: UISwitch!
+  @IBOutlet public weak var switcher: UISwitch!
 
   public struct Actions {
     public static let switchChanged = "SwitchChanged"
