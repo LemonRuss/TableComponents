@@ -25,7 +25,7 @@ open class SimpleLabelCell: UITableViewCell {
   }
   
   public struct Actions {
-    static let labelPressed = "LabelPressed"
+    public static let labelPressed = "LabelPressed"
   }
   
   func labelPressed() {

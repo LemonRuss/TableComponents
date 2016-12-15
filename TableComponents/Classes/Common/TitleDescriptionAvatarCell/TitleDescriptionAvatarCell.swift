@@ -42,7 +42,7 @@ open class TitleDescriptionAvatarCell: UITableViewCell {
   }
   
   public struct Actions {
-    static let descriptionLabelTapped = "DescriptionLabelTapped"
+    public static let descriptionLabelTapped = "DescriptionLabelTapped"
   }
   
   func descriptionTapped() {

@@ -46,7 +46,7 @@ open class HeightControlledCell: UITableViewCell {
   }
   
   public struct Actions {
-    static let ShowMore = "ShowMore"
+    public static let ShowMore = "ShowMore"
   }
 }
 

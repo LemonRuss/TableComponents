@@ -28,8 +28,8 @@ open class SimpleCell: UITableViewCell {
   }
   
   public struct Actions {
-    static let valueDidChanged = "ValueDidChanged"
-    static let didEndEditing = "DidEndEditing"
+    public static let valueDidChanged = "ValueDidChanged"
+    public static let didEndEditing = "DidEndEditing"
   }
 }
 

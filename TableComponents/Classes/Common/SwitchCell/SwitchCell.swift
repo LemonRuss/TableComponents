@@ -16,7 +16,7 @@ open class SwitchCell: UITableViewCell {
   @IBOutlet weak var switcher: UISwitch!
 
   public struct Actions {
-    static let switchChanged = "SwitchChanged"
+    public static let switchChanged = "SwitchChanged"
   }
   
   @IBAction func switcherChanged() {

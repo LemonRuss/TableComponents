@@ -16,8 +16,8 @@ open class SocialCell: UITableViewCell {
   
   
   public struct Actions {
-    static let vkButtonPressed = "vkButtonPressed"
-    static let fbButtonPressed = "fbButtonPressed"
+    public static let vkButtonPressed = "vkButtonPressed"
+    public static let fbButtonPressed = "fbButtonPressed"
   }
   
   @IBAction func vkButtonPressed(_ sender: AnyObject) {
